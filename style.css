@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --transparent: #0000005e;
+    --theme-color: #F96724;
+    --facebook: #1778F2;
+    --primary-shadow: #00000098;
+    --secondary-shadow: #0000002f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    transition: all .1s;
+    text-transform: capitalize;
+}
+
+*::selection {
+    background-color: var(--theme-color);
+    color: var(--primary-color);
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #6e6e6e9e;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    border-radius: 20px;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body.dark {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --transparent: #6e6e6e9e;
+    --primary-shadow: #ffffff98;
+    --secondary-shadow: #ffffff2f;
+}
+
+section {
+    height: 100vh;
+}
+
+.section-heading {
+    text-align: center;
+    margin: .5rem 5rem;
+    border-bottom: 1.5px solid var(--secondary-color);
+    padding: .5rem 0;
+}
+
+.section-heading h1 {
+    font-size: 3em;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.section-heading h1 span {
+    color: var(--theme-color);
+}
+
+.header {
+    padding: .5rem;
+}
+
+.header .initial-landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.header .initial-landing .brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .initial-landing .brand-logo img {
+    max-width: 50px;
+    border-radius: .7rem;
+}
+
+.header .initial-landing .brand-logo h3 {
+    margin-left: .8rem;
+}
+
+.header .initial-landing .quick-icons .menu-btn {
+    padding: .6rem 1rem;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.header .initial-landing .quick-icons .menu-btn i {
+    font-size: 1.2rem;
+}
+
+.header .initial-landing .quick-icons .menu-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.header .initial-landing .quick-icons .theme-switch-btn {
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    border-radius: .2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.header .initial-landing .quick-icons .theme-switch-btn i {
+    margin-left: 10px;
+}
+
+.header .initial-landing .quick-icons .theme-switch-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.header .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--transparent);
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s ease;
+    transform: translateX(-100%);
+}
+
+.header .side-menu.active {
+    transform: translateX(0);
+    z-index: 1000;
+}
+
+.header .side-menu .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .side-menu .menu-logo .close-btn {
+    padding: .5rem .9rem;
+    background: transparent;
+    border-radius: .6rem;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.header .side-menu .menu-logo .close-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.header .side-menu .menu-logo .brand-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .side-menu .menu-logo .brand-logo img {
+    max-width: 40px;
+    border-radius: .7rem;
+}
+
+.header .side-menu .menu-logo .brand-logo h3 {
+    margin-left: .8rem;
+    color: var(--secondary-color);
+    transition: none;
+}
+
+.header .side-menu .menu-container {
+    position: absolute;
+    background: var(--primary-color);
+    width: 25rem;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.header .side-menu .menu-container .menu-items {
+    list-style: none;
+    margin: 1rem;
+}
+
+.header .side-menu .menu-container .menu-items a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.header .side-menu .menu-container .menu-items a li {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    transition: all .2s linear;
+}
+
+.header .side-menu .menu-container .menu-items a li:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateX(20px);
+    border-radius: .2rem;
+}
+
+.header .side-menu .menu-container .menu-items a li i {
+    margin-right: 1rem;
+}
+
+.welcome-banner {
+    background: linear-gradient(#00000071, #00000080), url('images/img 2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 2rem 1rem;
+    height: 85vh;
+}
+
+.welcome-banner .banner-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.welcome-banner .banner-text h1 {
+    color: #fff;
+    font-size: 4em;
+    text-shadow: 0 3px 5px #000;
+}
+
+.welcome-banner .banner-text h3 {
+    color: #ff7300;
+    font-size: 1.7em;
+    font-weight: 700;
+    text-shadow: 0 1px 5px #000;
+}
+
+.welcome-banner .banner-text h4 {
+    font-size: 1.3em;
+    color: #fff;
+    text-shadow: 0 1px 5px #d8a469;
+}
+
+.welcome-banner .banner-text .mail-btn {
+    background: var(--transparent);
+    color: #fff;
+    padding: .6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    border-radius: .5rem;
+    margin: .5rem;
+    font-size: 1.2em;
+}
+
+.welcome-banner .banner-text .mail-btn i {
+    margin-left: 10px;
+}
+
+.welcome-banner .banner-text .mail-btn:hover {
+    background: var(--primary-color);
+    color: #000;
+}
+
+body.dark .welcome-banner .banner-text .mail-btn:hover {
+    color: #fff;
+}
+
+.welcome-banner .banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-banner .banner-image img {
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1rem 0;
+}
+
+.about-section .brand-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section .brand-photo img {
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+.about-section .about-text {
+    display: flex;
+    align-items: center;
+}
+
+.about-section .about-text h3 {
+    color: var(--theme-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-section .about-text h3 span {
+    color: var(--secondary-color);
+}
+
+.about-section .about-text .call-btn {
+    padding: .5rem 1.5rem;
+    background-color: var(--transparent);
+    color: var(--secondary-color);
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.about-section .about-text .call-btn:hover {
+    background-color: var(--theme-color);
+    color: var(--primary-color);
+}
+
+.speech-text {
+    text-align: justify;
+    margin: 1rem 8%;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#executive {
+    height: auto;
+}
+
+.executive-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+}
+
+.executive-section .executive {
+    margin: 1rem 6rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 8px 8px 14px 0 var(--primary-shadow), -8px -8px 12px 0 var(--secondary-shadow);
+    -webkit-box-shadow: 8px 8px 14px 0 var(--primary-shadow), -8px -8px 12px 0 var(--secondary-shadow);
+    border-radius: 1rem;
+    transition: all .5s ease;
+    -webkit-transition: .5s ease;
+}
+
+.executive-section .executive:hover {
+    box-shadow: inset 6px 6px 10px 0 var(--secondary-shadow), inset -6px -6px 10px 0 var(--primary-shadow);
+    -webkit-box-shadow: inset 6px 6px 10px 0 var(--secondary-shadow), inset -6px -6px 10px 0 var(--primary-shadow);
+    transform: scale(1.05);
+}
+
+.executive-section .executive .executive-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.executive-section .executive .executive-image img {
+    max-width: 250px;
+    border-radius: 1rem;
+}
+
+.executive-section .executive .executive-text {
+    text-align: center;
+}
+
+.executive-section .executive .executive-text h2 {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-weight: 800;
+}
+
+.executive-section .executive .executive-text h3 {
+    color: var(--theme-color);
+    font-weight: 800;
+}
+
+.executive-section .executive .executive-text p {
+    text-align: justify;
+    font-weight: 500;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.executive-section .follow-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.executive-section .follow-buttons .btn {
+    margin: 0 1rem;
+    padding: .64rem 1rem;
+    font-size: 1.6em;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .2s linear;
+    text-align: center;
+}
+
+.executive-section .follow-buttons .facebook {
+    background: var(--facebook);
+    color: #fff;
+    border-radius: 50%;
+    padding: .64rem 1.2rem;
+}
+
+.executive-section .follow-buttons .facebook:hover {
+    color: var(--facebook);
+    background: transparent;
+}
+
+.executive-section .follow-buttons .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+}
+
+.executive-section .follow-buttons .instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.executive-section .follow-buttons .github {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.executive-section .follow-buttons .github:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.photo-gallery {
+    margin: 0 8.2%;
+    padding: 2rem 0;
+}
+
+.photo-gallery img {
+    width: 400px;
+}
+
+#video {
+    height: auto;
+}
