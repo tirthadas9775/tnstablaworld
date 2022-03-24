@@ -78,6 +78,11 @@ section {
 
 .header {
     padding: .5rem;
+    background: linear-gradient(#000000a6, #00000080), url('images/img 2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
 }
 
 .header .initial-landing {
@@ -100,16 +105,17 @@ section {
 
 .header .initial-landing .brand-logo h3 {
     margin-left: .8rem;
+    color: #fff;
 }
 
 .header .initial-landing .quick-icons .menu-btn {
-    padding: .6rem 1rem;
+    padding: .6rem .9rem;
     outline: none;
     background: transparent;
-    border: none;
+    border: 1.5px solid #fff;
     cursor: pointer;
     z-index: 2000;
-    color: var(--secondary-color);
+    color: #fff;
     border-radius: 5px;
 }
 
@@ -118,18 +124,18 @@ section {
 }
 
 .header .initial-landing .quick-icons .menu-btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: #fff;
+    color: #111;
 }
 
 .header .initial-landing .quick-icons .theme-switch-btn {
     padding: .5rem 1rem;
     margin-right: 1rem;
     background: transparent;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #fff;
     border-radius: .2rem;
     cursor: pointer;
-    color: var(--secondary-color);
+    color: #fff;
     font-size: 1rem;
 }
 
@@ -138,9 +144,9 @@ section {
 }
 
 .header .initial-landing .quick-icons .theme-switch-btn:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    border: 1px solid var(--secondary-color);
+    background: #fff;
+    color: #111;
+    border: 1px solid #fff;
 }
 
 .header .side-menu {
@@ -236,10 +242,6 @@ section {
 }
 
 .welcome-banner {
-    background: linear-gradient(#00000071, #00000080), url('images/img 2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -365,6 +367,17 @@ body.dark .welcome-banner .banner-text .mail-btn:hover {
     font-weight: 600;
 }
 
+.social-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttons .facebook,
+.social-buttons .youtube {
+    margin: 0.1rem 1rem;
+}
+
 #executive {
     height: auto;
 }
@@ -378,16 +391,12 @@ body.dark .welcome-banner .banner-text .mail-btn:hover {
 .executive-section .executive {
     margin: 1rem 6rem;
     padding: 1rem 1.5rem;
-    box-shadow: 8px 8px 14px 0 var(--primary-shadow), -8px -8px 12px 0 var(--secondary-shadow);
-    -webkit-box-shadow: 8px 8px 14px 0 var(--primary-shadow), -8px -8px 12px 0 var(--secondary-shadow);
     border-radius: 1rem;
     transition: all .5s ease;
-    -webkit-transition: .5s ease;
 }
 
 .executive-section .executive:hover {
-    box-shadow: inset 6px 6px 10px 0 var(--secondary-shadow), inset -6px -6px 10px 0 var(--primary-shadow);
-    -webkit-box-shadow: inset 6px 6px 10px 0 var(--secondary-shadow), inset -6px -6px 10px 0 var(--primary-shadow);
+    box-shadow: 0 -.5px 14px 0 var(--primary-shadow);
     transform: scale(1.05);
 }
 
@@ -486,4 +495,17 @@ body.dark .welcome-banner .banner-text .mail-btn:hover {
 
 #video {
     height: auto;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem 5%;
+}
+
+.videos .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }

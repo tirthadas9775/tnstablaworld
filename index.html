@@ -19,6 +19,8 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="mpTNDUqD"></script>
     <header>
         <div class="header">
             <div class="initial-landing">
@@ -64,23 +66,25 @@
                     </ul>
                 </div>
             </div>
+            <section class="welcome-banner">
+                <div class="banner-text">
+                    <div>
+                        <h1>Welcome to</h1>
+                        <h3><span class="typewrite"></span></h3>
+                        <h4>Music is the soul of our life</h4>
+                        <a href="mailto:tirthadas9777@gmail.com"><button class="mail-btn">Mail us <i class="fa-solid fa-envelope"></i></button></a>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="images/logo.png" alt="">
+                </div>
+            </section>
         </div>
+
     </header>
 
     <main>
-        <section class="welcome-banner">
-            <div class="banner-text">
-                <div>
-                    <h1>Welcome to</h1>
-                    <h3><span class="typewrite"></span></h3>
-                    <h4>Music is the soul of our life</h4>
-                    <a href="mailto:tirthadas9777@gmail.com"><button class="mail-btn">Mail us <i class="fa-solid fa-envelope"></i></button></a>
-                </div>
-            </div>
-            <div class="banner-image">
-                <img src="images/logo.png" alt="">
-            </div>
-        </section>
+
 
 
         <section id="about">
@@ -107,7 +111,14 @@
                 </p>
             </div>
             <div class="social-buttons">
-                <button class="social"></button>
+                <div class="facebook">
+                    <div class="fb-like" data-href="https://www.facebook.com/tnstablaworld" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+                </div>
+                <div class="youtube">
+                    <script src="https://apis.google.com/js/platform.js"></script>
+
+                    <div class="g-ytsubscribe" data-channelid="UCamZnpgW9uSBhDSHQF09-6w" data-layout="default" data-theme="dark" data-count="default"></div>
+                </div>
             </div>
         </section>
 
@@ -180,6 +191,17 @@
             <div class="section-heading">
                 <h1>Our <span>Videos</span></h1>
             </div>
+            <div class="videos">
+                <div class="video">
+                    <iframe width="350" height="220" src="https://www.youtube-nocookie.com/embed/-DpRzkHc0PA?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe width="350" height="220" src="https://www.youtube-nocookie.com/embed/b3EFMqAU46E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe width="350" height="220" src="https://www.youtube-nocookie.com/embed/aO0S8GOGU5g?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -192,7 +214,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         var type = new Typed('.typewrite', {
-            strings: ["TN's TABLA WORLD", 'The World of Instrumental Music'],
+            strings: ["TN's TABLA WORLD", 'The World of <br> INSTRUMENTAL MUSIC'],
             typeSpeed: 40,
             loop: true,
             backDelay: 2000,
