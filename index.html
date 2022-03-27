@@ -45,22 +45,22 @@
                         </li>
                         <div class="menu-items">
                             <a href="#">
-                                <li><i class="fa-solid fa-house"></i> Home</li>
+                                <li class="item"><i class="fa-solid fa-house"></i> Home</li>
                             </a>
                             <a href="#about">
-                                <li><i class="fa-solid fa-circle-info"></i> About Us</li>
+                                <li class="item"><i class="fa-solid fa-circle-info"></i> About Us</li>
                             </a>
                             <a href="#executive">
-                                <li><i class="fa-solid fa-user-tie"></i> Executives</li>
+                                <li class="item"><i class="fa-solid fa-user-tie"></i> Executives</li>
                             </a>
                             <a href="#photos">
-                                <li><i class="fa-solid fa-image"></i> Gallery</li>
+                                <li class="item"><i class="fa-solid fa-image"></i> Gallery</li>
                             </a>
-                            <a href="">
-                                <li><i class="fa-solid fa-video"></i> Videos</li>
+                            <a href="#video">
+                                <li class="item"><i class="fa-solid fa-video"></i> Videos</li>
                             </a>
-                            <a href="">
-                                <li><i class="fa-solid fa-paper-plane"></i> Contact</li>
+                            <a href="#contact">
+                                <li class="item"><i class="fa-solid fa-paper-plane"></i> Contact</li>
                             </a>
                         </div>
                     </ul>
@@ -140,9 +140,9 @@
                             Tabla Player. TN's TABLA WORLD is one of the attempt of so.</p>
                     </div>
                     <div class="follow-buttons">
-                        <a href="https://www.facebook.com/tirthadas.developer/"><button class="facebook btn"><i class="fa-brands fa-facebook-f"></i></button></a>
-                        <a href="https://www.instagram.com/tirthadas.tirtha/"><button class="instagram btn"><i class="fa-brands fa-instagram"></i></button></a>
-                        <a href="https://github.com/tirthadas9775"><button class="github btn"><i class="fa-brands fa-github"></i></button></a>
+                        <a href="https://www.facebook.com/tirthadas.developer/" target="_blank"><button class="facebook btn"><i class="fa-brands fa-facebook-f"></i></button></a>
+                        <a href="https://www.instagram.com/tirthadas.tirtha/" target="_blank"><button class="instagram btn"><i class="fa-brands fa-instagram"></i></button></a>
+                        <a href="https://github.com/tirthadas9775" target="_blank"><button class="github btn"><i class="fa-brands fa-github"></i></button></a>
                     </div>
                 </div>
                 <div class="executive">
@@ -156,8 +156,8 @@
                             TN's TABLA WORLD is one of the attempt of so.</p>
                     </div>
                     <div class="follow-buttons">
-                        <a href="https://www.facebook.com/ratna.devi.3304673"><button class="facebook btn"><i class="fa-brands fa-facebook-f"></i></button></a>
-                        <a href=""><button class="instagram btn"><i class="fa-brands fa-instagram"></i></button></a>
+                        <a href="https://www.facebook.com/ratna.devi.3304673" target="_blank"><button class="facebook btn"><i class="fa-brands fa-facebook-f"></i></button></a>
+                        <a href="#" target="_blank"><button class="instagram btn"><i class="fa-brands fa-instagram"></i></button></a>
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@
                 </div>
             </div>
             <div class="button-panel">
-                <a href=""><button class="see-more-btn btn">See more <i class="fa-solid fa-arrow-right"></i></button></a>
+                <a href="https://www.youtube.com/c/TNsTABLAWORLD" target="_blank"><button class="see-more-btn btn">See more <i class="fa-solid fa-arrow-right"></i></button></a>
                 <div class="btn">
                     <script src="https://apis.google.com/js/platform.js"></script>
 
@@ -211,7 +211,51 @@
                 </div>
             </div>
         </section>
+
+
+        <section id="contact">
+            <div class="section-heading">
+                <h1><span>Contact</span> us</h1>
+            </div>
+            <div class="contact">
+                <div class="info">
+                    <h3 class="title">contact info</h3>
+
+                    <div class="data">
+                        <h3>
+                            <i class="fas fa-envelope"></i> tirthadas9777@gmail.com
+                        </h3>
+                        <h3>
+                            <i class="fas fa-phone"></i> +8801636562029
+                        </h3>
+                    </div>
+                </div>
+                <form name="contact-form" autocomplete="off">
+                    <div>
+                        <div id="form_alerts"></div>
+                        <input type="text" placeholder="Name" class="box" name="name" id="name" required>
+                        <input type="email" placeholder="E-mail" class="box" name="email" id="email" required>
+                        <textarea name="message" id="message" cols="30" rows="7" class="box message" placeholder="Your message" required></textarea>
+                        <button type="submit" class="send-btn">send <i class="fas fa-paper-plane"></i></button>
+                        <button type="reset" class="reset-btn">reset <i class="fa-solid fa-arrow-rotate-left"></i></button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer">
+            <img src="images/logo.png" alt="" class="logo">
+            <h3>TN's TABLA WORLD</h3>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=3e423afb-5afe-4b8b-b31b-48711d8d55f1" title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120v.png?ID=3e423afb-5afe-4b8b-b31b-48711d8d55f1" alt="DMCA.com Protection Status" /></a>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js">
+            </script>
+            <h4>© Copyright 2021-22 || All Rights Reserved || TN's TABLA WORLD</h4>
+            <h4 id="developer">Developer: <a href="https://tirthadas.netlify.app/">tirtha das</a></h4>
+            <h5>Version v.1.0.3</h5>
+        </div>
+    </footer>
 
     <script src="menu.js"></script>
     <script src="theme.js"></script>
@@ -220,31 +264,16 @@
         AOS.init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var type = new Typed('.typewrite', {
-            strings: ["TN's TABLA WORLD", 'The World of <br> INSTRUMENTAL MUSIC'],
-            typeSpeed: 40,
-            loop: true,
-            backDelay: 2000,
-            backSpeed: 15,
-        });
-    </script>
+    <script src="typewrite.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="owl-carousel.js"></script>
+    <script src="contact-form.js"></script>
     <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 12,
-            autoHeight: true,
-            responsive: {
-                700: {
-                    items: 1
-                },
-                1000: {
-                    items: 2
-                }
-
-            }
-        });
+        var item = $('.item');
+        var menu = $('.side-menu');
+        item.click(function() {
+            menu.removeClass('active');
+        })
     </script>
 
 </body>

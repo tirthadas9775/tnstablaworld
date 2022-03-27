@@ -42,6 +42,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
+    font-size: 90%;
     overflow-x: hidden;
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -198,7 +199,7 @@ section {
     width: 100vw;
     height: 100vh;
     transition: all .5s ease;
-    transform: translateX(-100%);
+    transform: translateX(-100vw);
 }
 
 .header .side-menu.active {
@@ -530,10 +531,6 @@ body.dark .welcome-banner .banner-text .mail-btn:hover {
     padding: 2rem 0;
 }
 
-.photo-gallery img {
-    width: 400px;
-}
-
 .videos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -576,4 +573,272 @@ body.dark .welcome-banner .banner-text .mail-btn:hover {
     background-color: var(--theme-color);
     border: 2px solid var(--theme-color);
     color: var(--primary-color);
+}
+
+#contact {
+    height: auto;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 8%;
+}
+
+.contact .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 30rem;
+}
+
+.contact .info .title {
+    font-size: 2em;
+}
+
+.contact .info .data h3 {
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+.contact .info .data h3 i {
+    color: var(--theme-color);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact form #form_alerts {
+    background-color: #74ff74;
+    font-size: 1em;
+    color: #000;
+    border-radius: 5px;
+}
+
+body.dark .contact form #form_alerts {
+    background-color: #41ff41;
+    font-size: 1em;
+    color: #000;
+}
+
+.contact form #form_alerts .ok-btn {
+    margin: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+.contact form .box {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-transform: none;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: .2rem;
+    width: 100%;
+}
+
+.contact form .send-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .2s linear;
+}
+
+.contact form .send-btn i {
+    margin-left: 5px;
+}
+
+.contact form .send-btn:hover {
+    background-color: var(--theme-color);
+    border: 2px solid var(--theme-color);
+    color: var(--primary-color);
+}
+
+.contact form .send-btn:disabled {
+    border: 1px solid #999999;
+    background-color: transparent;
+    color: #666666;
+    pointer-events: none;
+}
+
+.contact form .reset-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .2s linear;
+}
+
+.contact form .reset-btn i {
+    margin-left: 5px;
+}
+
+.contact form .reset-btn:hover {
+    background-color: var(--theme-color);
+    border: 2px solid var(--theme-color);
+    color: var(--primary-color);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.footer .logo {
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.footer h4 a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+#developer {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 790px) {
+    body {
+        font-size: 75%;
+    }
+    section {
+        height: auto;
+    }
+    .executive-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .videos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section-heading {
+        margin: .5rem 2rem;
+    }
+    .header .side-menu .menu-container {
+        width: 100%;
+        height: 100vh;
+        padding: 1rem;
+    }
+    .welcome-banner {
+        grid-template-columns: repeat(1, 1fr);
+        height: 150vh;
+    }
+    .about-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-text {
+        justify-content: center;
+    }
+    .executive-section .executive {
+        margin: 1rem;
+    }
+    .contact {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .info {
+        align-items: right;
+        justify-content: right;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header .initial-landing .brand-logo img {
+        max-width: 40px;
+    }
+    .header .initial-landing .quick-icons .menu-btn {
+        padding: .3rem .6rem;
+    }
+    .header .initial-landing .quick-icons .menu-btn i {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .initial-landing .quick-icons .theme-switch-btn {
+        padding: .3rem .7rem;
+        margin-right: .5rem;
+        font-size: 1rem;
+    }
+    .welcome-banner {
+        height: 110vh;
+    }
+    .welcome-banner .banner-text {
+        margin: 0 1rem;
+    }
+    .welcome-banner .banner-text h1 {
+        font-size: 4em;
+    }
+    .executive-section .follow-buttons .btn {
+        border-radius: 50%;
+        padding: .7rem 1rem;
+    }
+    .executive-section .follow-buttons .facebook {
+        padding: .7rem 1.1rem;
+    }
+    .videos {
+        margin: 3rem auto;
+    }
+    .videos .video iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    body {
+        font-size: 65%;
+    }
+    .header .initial-landing .brand-logo h3 {
+        margin-left: .5rem;
+    }
+    .header .initial-landing .quick-icons .menu-btn i {
+        font-size: .7rem;
+    }
+    .header .initial-landing .quick-icons .theme-switch-btn {
+        padding: .2rem .5rem;
+        margin-right: .1rem;
+        font-size: .7rem;
+    }
+    .welcome-banner .banner-text h1 {
+        font-size: 3.5em;
+    }
+    .welcome-banner .banner-image img {
+        max-width: 200px;
+    }
+    .about-section .brand-photo img {
+        max-width: 200px;
+    }
+    .executive-section .executive .executive-image img {
+        max-width: 200px;
+    }
+    .videos .video iframe {
+        width: 250px;
+        height: 150px;
+    }
 }

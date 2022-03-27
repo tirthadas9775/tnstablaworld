@@ -1,6 +1,7 @@
 var menuBtn = $('.menu-btn');
 var closeBtn = $('.close-btn');
 var sideMenu = $('.side-menu');
+var body = $('body');
 
 $(document).ready(function() {
     menuBtn.click(function() {
@@ -17,4 +18,5 @@ $(document).ready(function() {
             menu.removeClass('fixed');
         }
     });
+
 });
